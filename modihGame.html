@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Runner Game</title>
+
+    <link rel="stylesheet" href="modih.css">
+</head>
+<body class="winter">
+
+    <!-- HUD -->
+    <div id="hud">
+
+        <div class="hud-item">
+             Coins:
+            <span id="score">0</span>
+        </div>
+
+        <div class="hud-item">
+             Season :
+                       <span id="season">Winter</span>
+        </div>
+
+    </div>
+
+    <!-- Night Mode -->
+    <button id="nightBtn">
+         Night Mode
+    </button>
+
+    <!-- Game Area -->
+    <div id="game">
+
+        <!-- Stars -->
+        <div id="starsContainer"></div>
+
+        <!-- Clouds -->
+        <div id="cloudContainer"></div>
+
+        <!-- Character -->
+        <img
+            id="player"
+            src="https://i1.sndcdn.com/artworks-000533661657-yqeoag-t1080x1080.jpg"
+            alt="Runner"
+        >
+
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOver" class="hidden">
+
+        <div class="gameOverBox">
+
+            <h1> lavday rabhujyam</h1>
+
+            <p>
+                Auto Restart In
+                <span id="countdown">10</span>
+                Seconds
+            </p>
+
+            <div class="buttons">
+
+                <button onclick="restartGame()">
+                     Restart
+                </button>
+
+                <button onclick="leaveGame()">
+                    leave
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="modihGame.js"></script>
+
+</body>
+</html>

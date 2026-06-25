@@ -1,0 +1,322 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    transition:background 1s;
+}
+
+/* SEASONS */
+
+body.winter{
+    background:
+    linear-gradient(
+    to bottom,
+    #bde6ff,
+    #ffffff
+    );
+}
+
+body.summer{
+    background:
+    linear-gradient(
+    to bottom,
+    #6fc8ff,
+    #ffe27a
+    );
+}
+
+body.rain{
+    background:
+    linear-gradient(
+    to bottom,
+    #526d82,
+    #9db2bf
+    );
+}
+
+/* NIGHT MODE */
+
+body.night{
+    background:
+    linear-gradient(
+    to bottom,
+    #020617,
+    #0f172a
+    ) !important;
+}
+
+/* GAME */
+
+#game{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* HUD */
+
+#hud{
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:1000;
+}
+
+.hud-item{
+    background:white;
+    margin-bottom:10px;
+    padding:10px 15px;
+    border-radius:10px;
+    font-weight:bold;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+/* NIGHT BUTTON */
+
+#nightBtn{
+    position:fixed;
+    right:15px;
+    top:15px;
+
+    z-index:1000;
+
+    border:none;
+    border-radius:10px;
+
+    padding:12px 18px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    background:#111827;
+    color:white;
+}
+
+/* PLAYER */
+
+#player{
+
+    position:absolute;
+
+    left:120px;
+    bottom:60px;
+
+    width:110px;
+    height:110px;
+
+    user-select:none;
+
+    z-index:50;
+}
+
+/* OBSTACLE */
+
+.obstacle{
+
+    position:absolute;
+
+    bottom:60px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #ff6961,
+    #c1121f
+    );
+
+    border-radius:8px;
+
+    box-shadow:
+    0 0 10px rgba(0,0,0,.25);
+}
+
+/* COINS */
+
+.coin{
+
+    position:absolute;
+
+    width:35px;
+    height:35px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle,
+    #ffe600,
+    #ffb703
+    );
+
+    box-shadow:
+    0 0 15px gold;
+}
+
+/* CLOUDS */
+
+.cloud{
+
+    position:absolute;
+
+    width:140px;
+    height:60px;
+
+    background:white;
+
+    border-radius:50px;
+
+    opacity:.85;
+}
+
+.cloud::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:70px;
+    height:70px;
+
+    background:white;
+
+    border-radius:50%;
+
+    left:20px;
+    top:-25px;
+}
+
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:60px;
+    height:60px;
+
+    background:white;
+
+    border-radius:50%;
+
+    right:15px;
+    top:-20px;
+}
+
+/* STARS */
+
+.star{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:
+    twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.2;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+/* GAME OVER */
+
+#gameOver{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.85);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:5000;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.gameOverBox{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    min-width:300px;
+}
+
+.gameOverBox h1{
+    margin-bottom:15px;
+}
+
+.gameOverBox p{
+    margin-bottom:20px;
+}
+
+.buttons button{
+
+    border:none;
+
+    padding:12px 18px;
+
+    margin:5px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+/* STAR CONTAINER */
+
+#starsContainer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+/* CLOUD CONTAINER */
+
+#cloudContainer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:2;
+}
